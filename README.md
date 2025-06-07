@@ -1,18 +1,18 @@
 # AI Data Annotation Pipeline
 
 ## Overview
-This repository contains an AI Data Annotation Pipeline designed to preprocess, annotate, and evaluate text data for sentiment analysis. The pipeline processes movie reviews from the IMDb dataset, using DistilBERT to predict sentiment (positive or negative), refines low-confidence predictions through prompt engineering, and evaluates performance with detailed metrics and visualizations. Its purpose is to demonstrate end-to-end data annotation workflows, showcasing skills in natural language processing (NLP), data ethics, and model evaluation, applicable to AI training and research.
+This repository hosts an AI Data Annotation Pipeline for sentiment analysis on movie reviews from the IMDb dataset. It leverages DistilBERT to predict positive or negative sentiment, preprocesses text to remove personally identifiable information (PII), refines low-confidence predictions via prompt engineering, and evaluates performance with detailed metrics and visualizations. The pipeline serves as a showcase of natural language processing (NLP), ethical data handling, and model evaluation, ideal for AI training, research, or learning NLP workflows.
 
-Key features:
-- **Preprocessing**: Removes personally identifiable information (PII) using spaCy and Regex for ethical data handling.
-- **Annotation**: Applies DistilBERT for sentiment classification.
-- **Prompt Engineering**: Refines predictions with confidence below 0.95 to improve accuracy.
-- **Evaluation**: Computes class-specific and weighted precision, recall, and F1-score.
-- **Visualization**: Generates confidence histograms and confusion matrices.
-- **Error Analysis**: Identifies patterns in misclassified samples.
+Key components:
+- **Preprocessing**: Removes PII using spaCy and Regex to ensure data privacy.
+- **Annotation**: Uses DistilBERT for sentiment classification.
+- **Prompt Engineering**: Refines predictions with confidence <0.95 to enhance accuracy.
+- **Evaluation**: Calculates class-specific and weighted precision, recall, and F1-score.
+- **Visualization**: Produces confidence histograms and confusion matrices.
+- **Error Analysis**: Identifies linguistic patterns in misclassified samples.
 
 ## Pipeline Diagram
-The following Mermaid diagram illustrates the pipeline’s workflow:
+The following Mermaid diagram outlines the pipeline’s workflow:
 
 ```mermaid
 graph TD
