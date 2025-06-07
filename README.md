@@ -12,17 +12,9 @@ Key components:
 - **Error Analysis**: Identifies linguistic patterns in misclassified samples.
 
 ## Pipeline Diagram
-The following Mermaid diagram outlines the pipeline’s workflow:
+The following diagram outlines the pipeline’s workflow:
 
-```mermaid
-graph TD
-    A[Raw IMDb Data] --> B[Preprocess PII Removal]
-    B --> C[DistilBERT Annotation]
-    C --> D[Refine Prompt Engineering]
-    D --> E[Evaluate Metrics]
-    E --> F[Visualize Histogram Confusion Matrix]
-    F --> G[Analyze Error Patterns]
-    G --> H[Save Outputs CSV PNGs]
+![Pipeline Diagram](ai_data_annotation_pipeline/pipeline_diagram.jpg)
 
 This pipeline demonstrates end-to-end data annotation and model evaluation for AI training, built for the Outlier Computer Programming AI Trainer role. It runs in Google Colab (free tier) and includes:
 
