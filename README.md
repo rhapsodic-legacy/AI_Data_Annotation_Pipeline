@@ -29,6 +29,7 @@ This pipeline demonstrates end-to-end data annotation and model evaluation for A
 3. Use the IMDb dataset (public, Hugging Face).
 
 ## Outputs
+- `accuracy_bar_plot.png`: Confusion matrix for refined predictions.
 - `annotated_imdb_outputs.csv`: Annotated dataset with model predictions and metrics.
 - `confidence_histogram.png`: Distribution of confidence scores.
 - `confusion_matrix.png`: Confusion matrix for refined predictions.
