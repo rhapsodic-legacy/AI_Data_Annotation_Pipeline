@@ -16,13 +16,13 @@ The following Mermaid diagram illustrates the pipeline’s workflow:
 
 ```mermaid
 graph TD
-    A[Raw IMDb Data] --> B[Preprocessing: PII Removal]
+    A[Raw IMDb Data] --> B[Preprocess PII Removal]
     B --> C[DistilBERT Annotation]
-    C --> D[Refinement: Prompt Engineering]
-    D --> E[Evaluation & Metrics]
-    E --> F[Visualization: Histogram, Confusion Matrix]
-    F --> G[Error Analysis: Misclassified Patterns]
-    G --> H[Outputs: CSV, PNGs]
+    C --> D[Refine Prompt Engineering]
+    D --> E[Evaluate Metrics]
+    E --> F[Visualize Histogram Confusion Matrix]
+    F --> G[Analyze Error Patterns]
+    G --> H[Save Outputs CSV PNGs]
 
 This pipeline demonstrates end-to-end data annotation and model evaluation for AI training, built for the Outlier Computer Programming AI Trainer role. It runs in Google Colab (free tier) and includes:
 
