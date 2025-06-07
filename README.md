@@ -1,4 +1,29 @@
 # AI Data Annotation Pipeline
+
+## Overview
+This repository contains an AI Data Annotation Pipeline designed to preprocess, annotate, and evaluate text data for sentiment analysis. The pipeline processes movie reviews from the IMDb dataset, using DistilBERT to predict sentiment (positive or negative), refines low-confidence predictions through prompt engineering, and evaluates performance with detailed metrics and visualizations. Its purpose is to demonstrate end-to-end data annotation workflows, showcasing skills in natural language processing (NLP), data ethics, and model evaluation, applicable to AI training and research.
+
+Key features:
+- **Preprocessing**: Removes personally identifiable information (PII) using spaCy and Regex for ethical data handling.
+- **Annotation**: Applies DistilBERT for sentiment classification.
+- **Prompt Engineering**: Refines predictions with confidence below 0.95 to improve accuracy.
+- **Evaluation**: Computes class-specific and weighted precision, recall, and F1-score.
+- **Visualization**: Generates confidence histograms and confusion matrices.
+- **Error Analysis**: Identifies patterns in misclassified samples.
+
+## Pipeline Diagram
+The following Mermaid diagram illustrates the pipeline’s workflow:
+
+```mermaid
+graph TD
+    A[Raw IMDb Data] --> B[Preprocessing: PII Removal]
+    B --> C[DistilBERT Annotation]
+    C --> D[Refinement: Prompt Engineering]
+    D --> E[Evaluation & Metrics]
+    E --> F[Visualization: Histogram, Confusion Matrix]
+    F --> G[Error Analysis: Misclassified Patterns]
+    G --> H[Outputs: CSV, PNGs]
+
 This pipeline demonstrates end-to-end data annotation and model evaluation for AI training, built for the Outlier Computer Programming AI Trainer role. It runs in Google Colab (free tier) and includes:
 
 - **Data Preprocessing**: Cleans text and removes PII using spaCy and Regex, inspired by my work on the Hugging Face BLOOM LLM PII toolkit.
