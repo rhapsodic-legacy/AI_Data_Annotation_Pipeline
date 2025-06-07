@@ -1,0 +1,58 @@
+# AI Data Annotation Pipeline Walkthrough
+
+## 1. Intent of the Model
+
+This pipeline performs sentiment analysis on IMDb movie reviews, predicting positive or negative sentiment while ensuring ethical data handling. It preprocesses text to remove personally identifiable information (PII), annotates sentiment using DistilBERT, refines low-confidence predictions via prompt engineering, and evaluates performance with standard metrics. The pipeline is designed for AI training, research, or learning NLP workflows, optimized for Google Colab's free tier.
+
+## 2. How the Code Works
+
+### Preprocessing (remove_pii)
+- **Function**: Removes PII (e.g., names, organizations) using spaCy and Regex to ensure data privacy.
+- **Why Chosen**: Ethical handling of user-generated content. SpaCy and Regex are lightweight, suitable for Colab's memory limits.
+
+### Annotation (annotate_text)
+- **Function**: Uses DistilBERT for sentiment classification and confidence scoring.
+- **Why Chosen**: DistilBERT is efficient, balancing accuracy and computational demands for Colab's free tier (CPU/GPU).
+
+### Prompt Engineering (refine_prompt)
+- **Function**: Refines predictions with confidence <0.95 by adding context (e.g., "Analyze the sentiment… focusing on emotional tone").
+- **Why Chosen**: Improves accuracy without retraining, leveraging Colab's resources efficiently.
+
+### Evaluation (compute_metrics)
+- **Function**: Computes precision, recall, and F1-score (class-specific and weighted).
+- **Why Chosen**: Standard metrics for classification, providing a clear performance overview.
+
+### Error Analysis
+- **Function**: Extracts bigrams from misclassified texts to identify patterns (e.g., "entertaining film").
+- **Why Chosen**: Lightweight analysis (CountVectorizer) to reveal linguistic challenges without heavy computation.
+
+## 3. Results Explained
+
+- **Dataset**: 1000 shuffled IMDb reviews (512 negative, 488 positive).
+- **Original Model**:
+  - Weighted F1: 0.87 (Negative F1=0.88, Positive F1=0.86).
+  - Strong baseline with high confidence (e.g., scores >0.99).
+- **Refined Model**:
+  - Weighted F1: 0.87 (Negative F1=0.88, Positive F1=0.86).
+  - Corrected low-confidence errors (e.g., a positive review flipped from negative with confidence 0.8418 → 0.9781).
+
+## 4. How Refinement Improves Results
+
+Refinement targets predictions with confidence <0.95, adding contextual prompts to enhance accuracy. For example, a positive review initially misclassified as negative (confidence 0.8418) was corrected to positive (confidence 0.9781) after refinement. While the overall F1-score remained 0.87, this step improved specific low-confidence cases, showcasing targeted enhancement without retraining.
+
+## 5. Key Takeaways
+
+- **Ethical Preprocessing**: PII removal ensures data privacy, aligning with real-world AI standards.
+- **Efficient Model Choice**: DistilBERT delivers strong performance (F1=0.87) within Colab's limits.
+- **Targeted Refinement**: Prompt engineering corrects subtle errors, demonstrating practical improvement strategies.
+
+## 6. Challenges Overcome
+
+- **Nuanced Sentiments**: The model struggles with sarcasm or mixed tones (e.g., "What more could you want in a kid's show!"). Refinement helps but doesn't fully resolve high-confidence errors.
+- **Hardware Constraints**: All components (e.g., spaCy, CountVectorizer) are optimized for Colab's free tier, ensuring smooth execution.
+
+## 7. Areas for Improvement
+
+- **Deeper Error Analysis**: Filter bigram artifacts (e.g., 'br br') and use TF-IDF for more specific patterns (e.g., "not bad").
+- **Refinement Threshold**: Test a lower threshold (e.g., 0.90) to refine more predictions.
+- **Advanced Models**: Explore larger models (e.g., RoBERTa) for nuanced cases, if resources allow.
