@@ -28,6 +28,18 @@ The pipeline is organized within the `ai_data_annotation_pipeline` folder, conta
 - **`confidence_histogram.png`**: Histogram of confidence scores for refined predictions.
 - **`confusion_matrix.png`**: Heatmap visualizing refined model performance.
 
+## Results Summary
+- **Dataset**: 1000 shuffled IMDb test samples (512 negative, 488 positive).
+- **Original Model** (DistilBERT):
+  - Negative: Precision=0.85, Recall=0.91, F1=0.88
+  - Positive: Precision=0.90, Recall=0.83, F1=0.86
+  - Weighted: Precision=0.87, Recall=0.87, F1=0.87
+- **Refined Model** (Prompt Engineering at <0.95 confidence):
+  - Negative: Precision=0.84, Recall=0.92, F1=0.88
+  - Positive: Precision=0.90, Recall=0.82, F1=0.86
+  - Weighted: Precision=0.87, Recall=0.87, F1=0.87
+- **Insights**: Refinement corrects low-confidence errors, e.g., a positive review flipped from negative (confidence 0.8418 to 0.9781). Error analysis reveals challenges with nuanced or sarcastic sentiments, seen in bigrams like “entertaining film”.
+
 ## Setup Instructions
 1. Open `ai_data_annotation_pipeline.ipynb` in Google Colab.
 2. Install dependencies:
