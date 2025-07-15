@@ -2,7 +2,7 @@
  
 ## Overview
 This repository hosts an AI Data Annotation Pipeline for sentiment analysis on movie reviews from the IMDb dataset. It leverages DistilBERT to predict positive or negative sentiment, preprocesses text to remove personally identifiable information (PII), refines low-confidence predictions via prompt engineering, and evaluates performance with detailed metrics and visualizations. The pipeline showcases natural language processing (NLP), ethical data handling, and model evaluation, ideal for AI training, research, or learning NLP workflows.
-
+ 
 Key features: 
 - **Preprocessing**: Removes PII using spaCy and Regex to ensure data privacy. 
 - **Annotation**: Uses DistilBERT for sentiment classification.    
