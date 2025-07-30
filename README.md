@@ -5,7 +5,7 @@ This repository hosts an AI Data Annotation Pipeline for sentiment analysis on m
   
 Key features: 
 - **Preprocessing**: Removes PII using spaCy and Regex to ensure data privacy. 
-- **Annotation**: Uses DistilBERT for sentiment classification.    
+- **Annotation**: Uses DistilBERT for sentiment classification.     
 - **Prompt Engineering**: Refines predictions with confidence <0.95 to enhance accuracy.  
 - **Evaluation**: Calculates class-specific and weighted precision, recall, and F1-score.     
 - **Visualization**: Produces confidence histograms, confusion matrices, and accuracy bar plots.    
