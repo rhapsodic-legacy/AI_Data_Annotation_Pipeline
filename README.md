@@ -8,7 +8,7 @@ Key features:
 - **Annotation**: Uses DistilBERT for sentiment classification.         
 - **Prompt Engineering**: Refines predictions with confidence <0.95 to enhance accuracy.    
 - **Evaluation**: Calculates class-specific and weighted precision, recall, and F1-score.      
-- **Visualization**: Produces confidence histograms, confusion matrices, and accuracy bar plots.     
+- **Visualization**: Produces confidence histograms, confusion matrices, and accuracy bar plots.      
 - **Error Analysis**: Identifies linguistic patterns in misclassified samples using bigrams.       
 
 ## Pipeline Diagram 
