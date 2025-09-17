@@ -13,7 +13,7 @@ Key features:
 
 ## Pipeline Diagram 
 The following diagram outlines the pipeline’s workflow:     
-   
+    
 ![Pipeline Diagram](ai_data_annotation_pipeline/pipeline_diagram.jpg)
 
 ## Repository Contents
