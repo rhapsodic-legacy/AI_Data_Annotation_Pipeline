@@ -9,12 +9,12 @@ Key features:
 - **Prompt Engineering**: Refines predictions with confidence <0.95 to enhance accuracy.        
 - **Evaluation**: Calculates class-specific and weighted precision, recall, and F1-score.        
 - **Visualization**: Produces confidence histograms, confusion matrices, and accuracy bar plots.          
-- **Error Analysis**: Identifies linguistic patterns in misclassified samples using bigrams.        
+- **Error Analysis**: Identifies linguistic patterns in misclassified samples using bigrams.         
  
 ## Pipeline Diagram  
 The following diagram outlines the pipeline’s workflow:     
     
-![Pipeline Diagram](ai_data_annotation_pipeline/pipeline_diagram.jpg)
+![Pipeline Diagram](ai_data_annotation_pipeline/pipeline_diagram.jpg) 
 
 ## Repository Contents
 The pipeline is organized within the `ai_data_annotation_pipeline` folder, containing:
