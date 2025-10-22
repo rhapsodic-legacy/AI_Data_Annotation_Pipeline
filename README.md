@@ -10,7 +10,7 @@ Key features:
 - **Evaluation**: Calculates class-specific and weighted precision, recall, and F1-score.        
 - **Visualization**: Produces confidence histograms, confusion matrices, and accuracy bar plots.          
 - **Error Analysis**: Identifies linguistic patterns in misclassified samples using bigrams.         
- 
+  
 ## Pipeline Diagram   
 The following diagram outlines the pipeline’s workflow:        
      
