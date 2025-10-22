@@ -14,7 +14,7 @@ Key features:
 ## Pipeline Diagram   
 The following diagram outlines the pipeline’s workflow:       
      
-![Pipeline Diagram](ai_data_annotation_pipeline/pipeline_diagram.jpg) 
+![Pipeline Diagram](ai_data_annotation_pipeline/pipeline_diagram.jpg)  
 
 ## Repository Contents
 The pipeline is organized within the `ai_data_annotation_pipeline` folder, containing:
