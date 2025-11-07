@@ -12,7 +12,7 @@ Key features:
 - **Error Analysis**: Identifies linguistic patterns in misclassified samples using bigrams.          
    
 ## Pipeline Diagram   
-The following diagram outlines the pipeline’s workflow:        
+The following diagram outlines the pipeline’s workflow:         
        
 ![Pipeline Diagram](ai_data_annotation_pipeline/pipeline_diagram.jpg)   
 
