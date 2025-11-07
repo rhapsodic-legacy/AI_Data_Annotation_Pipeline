@@ -11,7 +11,7 @@ Key features:
 - **Visualization**: Produces confidence histograms, confusion matrices, and accuracy bar plots.           
 - **Error Analysis**: Identifies linguistic patterns in misclassified samples using bigrams.          
    
-## Pipeline Diagram   
+## Pipeline Diagram    
 The following diagram outlines the pipeline’s workflow:           
          
 ![Pipeline Diagram](ai_data_annotation_pipeline/pipeline_diagram.jpg)   
