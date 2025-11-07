@@ -15,7 +15,7 @@ Key features:
 The following diagram outlines the pipeline’s workflow:            
          
 ![Pipeline Diagram](ai_data_annotation_pipeline/pipeline_diagram.jpg)   
-
+ 
 ## Repository Contents
 The pipeline is organized within the `ai_data_annotation_pipeline` folder, containing:
 - **`ai_data_annotation_pipeline.ipynb`**: Jupyter Notebook implementing the pipeline. It loads the IMDb dataset, preprocesses text, annotates sentiment, refines predictions, evaluates performance, and generates visualizations. Optimized for Google Colab’s free tier.
